@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	FILE *fr;
+	char r[150];
+	int i;
+	
+	if((fr=fopen("Nope.txt","r"))==NULL)
+	printf("Nein\n");
+	while(!feof(fr)){
+	fgets(r, 150, fr);
+	if(r[1]=='H')
+	printf("%s",r);
+	}
+	
+	fclose(fr);
+	return 0;
+}
